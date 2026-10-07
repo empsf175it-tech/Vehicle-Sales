@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TORQ | Vehicle & Ride Marketplace | Buy, Sell & Compare Vehicles</title>
+  <meta name="description" content="Join TORQ: The premier marketplace for motorcycle, scooter, and vehicle enthusiasts. Buy, sell, and compare superbikes, cruisers, adventure tourers, and electric rides with certified 180-point inspections and doorstep test rides.">
+  <meta name="keywords" content="TORQ, vehicle marketplace, buy used motorcycles, sell superbike, electric scooter, adventure motorcycle, cruiser bike, test ride vehicle, rider community">
+  <meta name="author" content="TORQ Network">
+  <link rel="canonical" href="https://torq.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://torq.com/">
+  <meta property="og:title" content="TORQ | Buy. Sell. Ride.">
+  <meta property="og:description" content="Premier vehicle and ride marketplace for motorcycle and automotive enthusiasts. Buy, sell, compare, and test ride.">
+  <meta property="og:image" content="https://torq.com/images/hero-ride.webp">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://torq.com/">
+  <meta name="twitter:title" content="TORQ | Buy. Sell. Ride.">
+  <meta name="twitter:description" content="Premier vehicle and ride marketplace for motorcycle and automotive enthusiasts. Buy, sell, compare, and test ride.">
+  <meta name="twitter:image" content="https://torq.com/images/hero-ride.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://torq.com/#organization",
+        "name": "TORQ",
+        "url": "https://torq.com/",
+        "logo": "https://torq.com/favicon.svg",
+        "sameAs": [
+          "https://instagram.com/torq",
+          "https://youtube.com/c/torq",
+          "https://twitter.com/torq"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-867-7834",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": "English"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://torq.com/#website",
+        "url": "https://torq.com/",
+        "name": "TORQ",
+        "description": "Premier Vehicle & Ride Marketplace",
+        "publisher": {
+          "@id": "https://torq.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Fuel Gauge Top Scroll Progress Bar -->
+  <div id="fuel-gauge-progress" role="progressbar" aria-label="Reading Progress Fuel Gauge"></div>
+
+  <!-- Custom Glowing Cursor (Disabled on Touch) -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Preloader: Tachometer Rev-Up Animation -->
+  <div id="preloader" aria-label="Loading TORQ">
+    <div class="tacho-wrap">
+      <svg class="tacho-svg" viewBox="0 0 160 160">
+        <defs>
+          <linearGradient id="tachoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF4D1A" />
+            <stop offset="65%" stop-color="#FFB020" />
+            <stop offset="100%" stop-color="#C6FF3D" />
+          </linearGradient>
+        </defs>
+        <circle class="tacho-bg-arc" cx="80" cy="80" r="64" />
+        <circle class="tacho-fill-arc" cx="80" cy="80" r="64" />
+      </svg>
+      <div class="tacho-center-content">
+        <span class="tacho-rpm-val">0</span>
+        <span class="tacho-unit">RPM x1000</span>
+      </div>
+    </div>
+    <div class="preloader-label">REV-LIMITING INITIALIZED</div>
+    <button class="preloader-skip" type="button">Skip to Garage &rarr;</button>
+  </div>
+
+  <!-- ==========================================================================
+       1. NAVBAR
+       ========================================================================== -->
+  <header class="site-nav" id="top-nav">
+    <div class="container">
+      <!-- Brand Logo (Precision Torque Gear & Piston Mark + Wordmark) -->
+      <a href="#" class="brand-link" aria-label="TORQ Home">
+        <svg class="brand-logo-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32 4 C34.2 4 35.5 6 37.5 6.5 C39.5 7 41.5 5.5 43.5 6.5 C45.5 7.5 46.2 9.8 48 11.2 C49.8 12.6 52.2 12.5 53.6 14.3 C55 16.1 54.5 18.5 55.5 20.5 C56.5 22.5 58.5 23.8 59 26 C59.5 28.2 58.2 30.2 58.2 32 C58.2 33.8 59.5 35.8 59 38 C58.5 40.2 56.5 41.5 55.5 43.5 C54.5 45.5 55 47.9 53.6 49.7 C52.2 51.5 49.8 51.4 48 52.8 C46.2 54.2 45.5 56.5 43.5 57.5 C41.5 58.5 39.5 57 37.5 57.5 C35.5 58 34.2 60 32 60 C29.8 60 28.5 58 26.5 57.5 C24.5 57 22.5 58.5 20.5 57.5 C18.5 56.5 17.8 54.2 16 52.8 C14.2 51.4 11.8 51.5 10.4 49.7 C9 47.9 9.5 45.5 8.5 43.5 C7.5 41.5 5.5 40.2 5 38 C4.5 35.8 5.8 33.8 5.8 32 C5.8 30.2 4.5 28.2 5 26 C5.5 23.8 7.5 22.5 8.5 20.5 C9.5 18.5 9 16.1 10.4 14.3 C11.8 12.5 14.2 12.6 16 11.2 C17.8 9.8 18.5 7.5 20.5 6.5 C22.5 5.5 24.5 7 26.5 6.5 C28.5 6 29.8 4 32 4 Z" fill="#15171C" stroke="#FF4D1A" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="32" cy="32" r="18" stroke="url(#torq-grad-nav)" stroke-width="3.5" stroke-dasharray="85 30" stroke-linecap="round"/>
+          <path d="M26 21 H38 V26 H26 Z" fill="#E7EAF0" stroke="#FF4D1A" stroke-width="1.5"/>
+          <rect x="29" y="26" width="6" height="13" fill="#FF4D1A" rx="1"/>
+          <circle cx="32" cy="38" r="4" fill="#FFB020" stroke="#15171C" stroke-width="1.5"/>
+          <path d="M28 44 L32 50 L36 44" stroke="#FF4D1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="torq-grad-nav" x1="14" y1="14" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FF4D1A"/>
+              <stop offset="50%" stop-color="#FFB020"/>
+              <stop offset="100%" stop-color="#C6FF3D"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="brand-wordmark">
+          <span class="brand-name">TOR<span>Q</span></span>
+          <span class="brand-tagline">Buy. Sell. Ride.</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#bikes" class="nav-link">Marketplace</a></li>
+          <li><a href="#calculator" class="nav-link">EMI &amp; Trade-In</a></li>
+          <li><a href="#compare" class="nav-link">Compare</a></li>
+          <li><a href="#why-us" class="nav-link">Why TORQ</a></li>
+          <li><a href="#sell" class="nav-link">Sell Your Ride</a></li>
+          <li><a href="#community" class="nav-link">Community</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Saved Wishlist Heart Counter Badge -->
+        <button type="button" id="nav-wishlist-btn" class="nav-wishlist-btn" title="Saved Rides Wishlist" aria-label="Saved Rides">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span class="wishlist-count-badge">2</span>
+        </button>
+
+        <!-- Login / Account Icon Button in Navbar -->
+        <button type="button" id="nav-auth-btn" class="nav-auth-btn" title="Sign In / Create Account" aria-label="Sign In">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+
+        <!-- Dashboard Navigation Icon Button in Navbar -->
+        <a href="#dashboard" id="nav-dashboard-btn" class="nav-dashboard-btn" title="Dashboard" aria-label="Dashboard">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="9" rx="1.5"></rect>
+            <rect x="14" y="3" width="7" height="5" rx="1.5"></rect>
+            <rect x="14" y="12" width="7" height="9" rx="1.5"></rect>
+            <rect x="3" y="16" width="7" height="5" rx="1.5"></rect>
+          </svg>
+        </a>
+
+        <!-- Tablet & Mobile Hamburger Toggle (iPad Mini & Mobile) -->
+        <button class="hamburger-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer" id="nav-hamburger-btn">
+          <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <line class="hamburger-line line-top" x1="4" y1="7" x2="20" y2="7"></line>
+            <line class="hamburger-line line-mid" x1="4" y1="12" x2="20" y2="12"></line>
+            <line class="hamburger-line line-bot" x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile & Tablet Offcanvas Drawer & Backdrop (iPad Mini & Touch Viewports) -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile and Tablet Navigation Menu">
+    <div class="drawer-header">
+      <div class="drawer-header-brand">
+        <span class="drawer-status-pill"></span>
+        <span class="drawer-title">TORQ NAVIGATION</span>
+      </div>
+      <button type="button" class="drawer-close-btn" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- 3 Action Icons Row inside Hamburger Menu (Wishlist, Account, Dashboard) -->
+    <div class="drawer-user-actions-panel" aria-label="User Quick Controls">
+      <div class="drawer-user-actions-title">QUICK ACCESS</div>
+      <div class="drawer-user-actions-row">
+        <!-- 1. Wishlist Heart with Counter Badge -->
+        <button type="button" id="drawer-wishlist-btn" class="drawer-action-btn" title="Saved Rides Wishlist" aria-label="Saved Rides">
+          <div class="drawer-action-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span class="wishlist-count-badge">2</span>
+          </div>
+          <span class="drawer-action-text">Saved</span>
+        </button>
+
+        <!-- 2. Account / Sign In -->
+        <button type="button" id="drawer-auth-btn" class="drawer-action-btn" title="Sign In / Create Account" aria-label="Sign In">
+          <div class="drawer-action-icon-wrap">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <span class="drawer-action-text" id="drawer-auth-label">Sign In</span>
+        </button>
+
+        <!-- 3. Dashboard -->
+        <a href="#dashboard" id="drawer-dashboard-btn" class="drawer-action-btn" title="Dashboard" aria-label="Dashboard">
+          <div class="drawer-action-icon-wrap">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="9" rx="1.5"></rect>
+              <rect x="14" y="3" width="7" height="5" rx="1.5"></rect>
+              <rect x="14" y="12" width="7" height="9" rx="1.5"></rect>
+              <rect x="3" y="16" width="7" height="5" rx="1.5"></rect>
+            </svg>
+          </div>
+          <span class="drawer-action-text">Dashboard</span>
+        </a>
+      </div>
+    </div>
+
+    <ul class="mobile-nav-menu">
+      <li>
+        <a href="#bikes" class="nav-link">
+          <span>Marketplace</span>
+          <svg class="drawer-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#calculator" class="nav-link">
+          <span>EMI &amp; Trade-In</span>
+          <svg class="drawer-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#compare" class="nav-link">
+          <span>Compare Rides</span>
+          <svg class="drawer-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#why-us" class="nav-link">
+          <span>Why TORQ</span>
+          <svg class="drawer-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#sell" class="nav-link">
+          <span>Sell Your Ride</span>
+          <svg class="drawer-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#community" class="nav-link">
+          <span>Community &amp; Events</span>
+          <svg class="drawer-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#faq" class="nav-link">
+          <span>FAQ</span>
+          <svg class="drawer-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#contact" class="nav-link">
+          <span>Contact Support</span>
+          <svg class="drawer-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </li>
+    </ul>
+
+    <!-- iPad Mini Drawer Footer -->
+    <div class="drawer-footer">
+      <div class="drawer-footer-card">
+        <span class="drawer-footer-title">TORQ Concierge</span>
+        <span class="drawer-footer-sub">Verified superbike escrow &amp; doorstep test rides</span>
+        <a href="tel:18008677243" class="drawer-footer-phone">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          1-800-TORQ-RIDE
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==========================================================================
+         2. HERO SECTION (CINEMATIC PARALLAX & SMART SEARCH)
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <img class="hero-bg-media" src="images/hero-ride.webp" alt="High performance motorcycle riding at golden hour sunset on open mountain highway" width="1920" height="1080">
+      <div class="hero-overlay-shade"></div>
+
+      <div class="container hero-content">
+        <div class="hero-badge-glow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          The Apex Motorcycle &amp; Scooter Network
+        </div>
+
+        <h1 class="hero-headline">
+          Find Your Ride. <br><span class="highlight-ember">Join The Hive.</span>
+        </h1>
+
+        <p class="hero-subhead">
+          Buy, sell, and compare verified superbikes, muscular cruisers, dual-sport tourers, and next-gen electric rides. Every machine 180-point inspected with doorstep test rides and escrow protection.
+        </p>
+
+        <!-- Smart Search Bar Widget -->
+        <div class="hero-search-glass" role="search">
+          <div class="search-field-group">
+            <label class="search-field-label" for="hero-filter-type">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+              Ride Type
+            </label>
+            <select id="hero-filter-type" class="search-select">
+              <option value="all">All Ride Categories</option>
+              <option value="motorcycle">Motorcycles (All)</option>
+              <option value="sport">Sport &amp; Track</option>
+              <option value="cruiser">Cruisers</option>
+              <option value="adventure">Adventure Tourers</option>
+              <option value="naked">Naked Streetfighters</option>
+              <option value="scooter">Maxi &amp; Urban Scooters</option>
+              <option value="electric">Electric Hybrids &amp; EVs</option>
+            </select>
+          </div>
+
+          <div class="search-field-group">
+            <label class="search-field-label" for="hero-filter-brand">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+              Brand / Make
+            </label>
+            <select id="hero-filter-brand" class="search-select">
+              <option value="all">All Legendary Brands</option>
+              <option value="Ducati">Ducati</option>
+              <option value="Harley-Davidson">Harley-Davidson</option>
+              <option value="BMW">BMW Motorrad</option>
+              <option value="KTM">KTM</option>
+              <option value="Yamaha">Yamaha</option>
+              <option value="Vespa">Vespa</option>
+              <option value="Triumph">Triumph</option>
+              <option value="Zero Motorcycles">Zero Motorcycles (EV)</option>
+              <option value="Ather">Ather Energy (EV)</option>
+            </select>
+          </div>
+
+          <div class="search-field-group">
+            <label class="search-field-label" for="hero-filter-budget">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              Max Budget
+            </label>
+            <select id="hero-filter-budget" class="search-select">
+              <option value="all">Any Budget</option>
+              <option value="8000">Under $8,000</option>
+              <option value="15000">Under $15,000</option>
+              <option value="22000">Under $22,000</option>
+              <option value="30000">Under $30,000</option>
+            </select>
+          </div>
+
+          <div class="search-field-group">
+            <label class="search-field-label" for="hero-filter-city">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Rider Hub
+            </label>
+            <select id="hero-filter-city" class="search-select">
+              <option value="all">All Riding Hubs</option>
+              <option value="Austin">Austin, TX</option>
+              <option value="Denver">Denver, CO</option>
+              <option value="Seattle">Seattle, WA</option>
+              <option value="Los Angeles">Los Angeles, CA</option>
+              <option value="Miami">Miami, FL</option>
+              <option value="San Francisco">San Francisco, CA</option>
+              <option value="San Jose">San Jose, CA</option>
+              <option value="San Diego">San Diego, CA</option>
+            </select>
+          </div>
+
+          <button id="hero-search-btn" class="btn btn-primary hero-search-btn" type="button">
+            Search Marketplace
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="hero-cta-group">
+          <a href="#bikes" class="btn btn-primary">
+            Browse 2,850+ Rides
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <a href="#sell" class="btn btn-secondary">
+            Sell Your Ride
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </a>
+        </div>
+
+        <!-- Floating HUD Telemetry Speedometer Widget -->
+        <div class="hero-hud-widget" aria-label="Hive Real-Time Telemetry HUD">
+          <div class="hud-stat">
+            <span class="hud-stat-val">2.8s</span>
+            <span class="hud-stat-lbl">Record 0&#8209;100</span>
+          </div>
+          <div class="hud-divider"></div>
+          <div class="hud-stat">
+            <span class="hud-stat-val" style="color: var(--color-electric);">100%</span>
+            <span class="hud-stat-lbl">Title Clear</span>
+          </div>
+          <div class="hud-divider"></div>
+          <div class="hud-stat">
+            <span class="hud-stat-val">180&#8209;PT</span>
+            <span class="hud-stat-lbl">Dyno Tested</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Cue -->
+      <a href="#marquee" class="hero-scroll-cue" aria-label="Scroll to Brand Marquee">
+        <div class="scroll-mouse-icon">
+          <div class="scroll-mouse-wheel"></div>
+        </div>
+        <span>Throttle Down</span>
+      </a>
+    </section>
+
+    <!-- Tyre Tread Divider -->
+    <div class="tyre-tread-divider"></div>
+
+    <!-- ==========================================================================
+         3. BRAND MARQUEE (INFINITE SCROLL STRIP)
+         ========================================================================== -->
+    <section class="brand-marquee-section" id="marquee" aria-label="Partner Brands and Manufacturers">
+      <div class="brand-marquee-track">
+        <div class="marquee-brand-item"><span class="brand-dot"></span>DUCATI</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>BMW MOTORRAD</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>HARLEY-DAVIDSON</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>YAMAHA</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>KTM READY TO RACE</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>VESPA ITALIA</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>ZERO MOTORCYCLES EV</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>ATHER ENERGY</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>TRIUMPH</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>KAWASAKI</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>APRILIA RACING</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>HONDA</div>
+        <!-- Duplicate for infinite seamless marquee loop -->
+        <div class="marquee-brand-item"><span class="brand-dot"></span>DUCATI</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>BMW MOTORRAD</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>HARLEY-DAVIDSON</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>YAMAHA</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>KTM READY TO RACE</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>VESPA ITALIA</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>ZERO MOTORCYCLES EV</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>ATHER ENERGY</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>TRIUMPH</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>KAWASAKI</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>APRILIA RACING</div>
+        <div class="marquee-brand-item"><span class="brand-dot"></span>HONDA</div>
+      </div>
+    </section>
+
+    <!-- Tyre Tread Divider -->
+    <div class="tyre-tread-divider"></div>
+
+    <!-- ==========================================================================
+         4. STATS SECTION (ODOMETER-STYLE COUNTERS)
+         ========================================================================== -->
+    <section class="stats-section" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <!-- Stat Card 1 -->
+          <div class="tilt-card stat-card">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-odometer" data-target="14500">0</span>
+              <span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">Active Hive Riders</div>
+            <p class="card-desc" style="margin-top: 0.5rem;">Verified enthusiasts connected across country chapters.</p>
+          </div>
+
+          <!-- Stat Card 2 -->
+          <div class="tilt-card stat-card">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-odometer" data-target="2850">0</span>
+              <span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">Certified Listings</div>
+            <p class="card-desc" style="margin-top: 0.5rem;">Dyno tested, title-checked, and escrow guaranteed.</p>
+          </div>
+
+          <!-- Stat Card 3 -->
+          <div class="tilt-card stat-card">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-odometer" data-target="68">0</span>
+              <span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">Riding Hub Cities</div>
+            <p class="card-desc" style="margin-top: 0.5rem;">Local marshals offering doorstep test ride delivery.</p>
+          </div>
+
+          <!-- Stat Card 4 -->
+          <div class="tilt-card stat-card">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-odometer" data-target="420">0</span>
+              <span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">Group Rides Hosted</div>
+            <p class="card-desc" style="margin-top: 0.5rem;">From weekend twisties to adrenaline track days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tyre Tread Divider -->
+    <div class="tyre-tread-divider"></div>
+
+    <!-- ==========================================================================
+         5. FEATURED RIDES MARKETPLACE (#bikes)
+         ========================================================================== -->
+    <section class="marketplace-section" id="bikes">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
+            Curated Showroom
+          </div>
+          <h2 class="section-title">
+            Featured <span class="text-gradient">Rides Marketplace</span>
+          </h2>
+          <p class="section-desc">
+            Explore meticulously vetted machines. Filter by category, test-ride at your doorstep, or reserve with 100% money-back escrow protection.
+          </p>
+        </header>
+
+        <!-- 6 Distinct Category Spotlight Cards (Center Aligned Tilt Cards) -->
+        <div class="category-spotlight-grid" aria-label="Browse By Ride Category">
+          <div class="tilt-card category-card" onclick="document.querySelector('.filter-chip[data-filter=\'sport\']').click();">
+            <div class="category-thumb-wrap">
+              <img src="images/cat-sport.webp" alt="Sport and supersport track motorcycles" class="category-thumb-img" width="800" height="520" loading="lazy">
+            </div>
+            <div class="category-card-name">Sport &amp; Track</div>
+            <div class="category-card-count">480+ Machines</div>
+          </div>
+
+          <div class="tilt-card category-card" onclick="document.querySelector('.filter-chip[data-filter=\'cruiser\']').click();">
+            <div class="category-thumb-wrap">
+              <img src="images/cat-cruiser.webp" alt="Muscular American and metric cruisers" class="category-thumb-img" width="800" height="520" loading="lazy">
+            </div>
+            <div class="category-card-name">Cruisers</div>
+            <div class="category-card-count">340+ Machines</div>
+          </div>
+
+          <div class="tilt-card category-card" onclick="document.querySelector('.filter-chip[data-filter=\'adventure\']').click();">
+            <div class="category-thumb-wrap">
+              <img src="images/cat-touring.webp" alt="Adventure tourers and dual-sport bikes" class="category-thumb-img" width="800" height="520" loading="lazy">
+            </div>
+            <div class="category-card-name">Adventure</div>
+            <div class="category-card-count">510+ Machines</div>
+          </div>
+
+          <div class="tilt-card category-card" onclick="document.querySelector('.filter-chip[data-filter=\'naked\']').click();">
+            <div class="category-thumb-wrap">
+              <img src="images/cat-naked.webp" alt="Aggressive naked streetfighters" class="category-thumb-img" width="800" height="520" loading="lazy">
+            </div>
+            <div class="category-card-name">Streetfighters</div>
+            <div class="category-card-count">390+ Machines</div>
+          </div>
+
+          <div class="tilt-card category-card" onclick="document.querySelector('.filter-chip[data-filter=\'scooter\']').click();">
+            <div class="category-thumb-wrap">
+              <img src="images/cat-scooter.webp" alt="Maxi and retro classic urban scooters" class="category-thumb-img" width="800" height="520" loading="lazy">
+            </div>
+            <div class="category-card-name">Scooters</div>
+            <div class="category-card-count">290+ Machines</div>
+          </div>
+
+          <div class="tilt-card category-card" onclick="document.querySelector('.filter-chip[data-filter=\'electric\']').click();">
+            <div class="category-thumb-wrap">
+              <img src="images/cat-electric.webp" alt="Next-gen high torque electric motorcycles and smart scooters" class="category-thumb-img" width="800" height="520" loading="lazy">
+            </div>
+            <div class="category-card-name">Electric EVs</div>
+            <div class="category-card-count">210+ Machines</div>
+          </div>
+        </div>
+
+        <!-- Marketplace Controls (Chips, Live Search & Sort) -->
+        <div class="market-controls">
+          <div class="market-chips-row">
+            <button class="filter-chip active" data-filter="all">All Rides (8)</button>
+            <button class="filter-chip" data-filter="electric">⚡ Electric &amp; Smart EVs</button>
+            <button class="filter-chip" data-filter="sport">🏁 Sport &amp; Track</button>
+            <button class="filter-chip" data-filter="cruiser">🦅 Cruisers</button>
+            <button class="filter-chip" data-filter="adventure">🏔️ Adventure Tourers</button>
+            <button class="filter-chip" data-filter="naked">🔥 Naked Streetfighters</button>
+            <button class="filter-chip" data-filter="scooter">🛵 Maxi &amp; Classic Scooters</button>
+          </div>
+
+          <div class="market-search-sort-row">
+            <div class="market-search-box">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="market-search" class="market-search-input" placeholder="Search by model, make, city, or engine specs...">
+            </div>
+
+            <div class="market-sort-wrap">
+              <label class="sort-label" for="market-sort">Sort Rides By:</label>
+              <select id="market-sort" class="market-sort-select">
+                <option value="featured">Featured First</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="mileage">Lowest Odometer</option>
+                <option value="year">Newest Year</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rides Grid (Rendered dynamically via app.js) -->
+        <div class="rides-grid" id="rides-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Tyre Tread Divider -->
+    <div class="tyre-tread-divider"></div>
+
+    <!-- ==========================================================================
+         6. EMI & TRADE-IN CALCULATOR (#calculator)
+         ========================================================================== -->
+    <section class="calculator-section" id="calculator">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Finance &amp; Equity
+          </div>
+          <h2 class="section-title">
+            EMI &amp; <span class="text-gradient">Trade-In Calculator</span>
+          </h2>
+          <p class="section-desc">
+            Calculate your monthly throttle payment with competitive enthusiast APR rates, or trade in your current machine for instant credit.
+          </p>
+        </header>
+
+        <div class="tilt-card calc-wrapper-card">
+          <!-- Calculator Tabs -->
+          <div class="calc-tabs">
+            <button class="calc-tab-btn active" data-tab="emi">Financing EMI Calculator</button>
+            <button class="calc-tab-btn" data-tab="trade">Instant Trade-In Valuation</button>
+          </div>
+
+          <!-- Tab Pane 1: EMI Calculator -->
+          <div id="calc-emi-pane" class="calc-content-grid">
+            <div class="calc-sliders-col">
+              <!-- Price Slider -->
+              <div class="calc-slider-box">
+                <div class="calc-slider-header">
+                  <span class="calc-slider-label">Vehicle Asking Price</span>
+                  <span class="calc-slider-value" id="emi-price-val">$24,900</span>
+                </div>
+                <input type="range" id="emi-price-slider" class="range-slider" min="2000" max="50000" step="500" value="24900">
+              </div>
+
+              <!-- Down Payment Slider -->
+              <div class="calc-slider-box">
+                <div class="calc-slider-header">
+                  <span class="calc-slider-label">Down Payment (Cash Equity)</span>
+                  <span class="calc-slider-value" id="emi-down-val">$5,000</span>
+                </div>
+                <input type="range" id="emi-down-slider" class="range-slider" min="0" max="25000" step="500" value="5000">
+              </div>
+
+              <!-- Tenure Slider -->
+              <div class="calc-slider-box">
+                <div class="calc-slider-header">
+                  <span class="calc-slider-label">Financing Term</span>
+                  <span class="calc-slider-value" id="emi-tenure-val">36 Mos</span>
+                </div>
+                <input type="range" id="emi-tenure-slider" class="range-slider" min="12" max="60" step="6" value="36">
+              </div>
+
+              <!-- Interest Rate Slider -->
+              <div class="calc-slider-box">
+                <div class="calc-slider-header">
+                  <span class="calc-slider-label">Annual Percentage Rate (APR)</span>
+                  <span class="calc-slider-value" id="emi-rate-val">6.8%</span>
+                </div>
+                <input type="range" id="emi-rate-slider" class="range-slider" min="3.0" max="15.0" step="0.2" value="6.8">
+              </div>
+            </div>
+
+            <!-- Tachometer Style Gauge Column -->
+            <div class="calc-gauge-col">
+              <div class="emi-gauge-svg-wrap">
+                <svg class="gauge-svg" viewBox="0 0 160 160">
+                  <defs>
+                    <linearGradient id="emiGaugeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#FF4D1A"/>
+                      <stop offset="70%" stop-color="#FFB020"/>
+                      <stop offset="100%" stop-color="#C6FF3D"/>
+                    </linearGradient>
+                  </defs>
+                  <circle class="gauge-track" cx="80" cy="80" r="64"/>
+                  <circle id="emi-gauge-arc" class="gauge-fill" cx="80" cy="80" r="64"/>
+                </svg>
+                <div class="gauge-center-text">
+                  <span class="gauge-val" id="emi-monthly-val">$612</span>
+                  <span class="gauge-sub">Estimated Monthly EMI</span>
+                </div>
+              </div>
+
+              <div class="emi-breakdown-stats">
+                <div class="breakdown-item">
+                  <span class="breakdown-lbl">Total Interest</span>
+                  <span class="breakdown-val" id="emi-interest-val">$2,132</span>
+                </div>
+                <div class="breakdown-item">
+                  <span class="breakdown-lbl">Total Loan Cost</span>
+                  <span class="breakdown-val" id="emi-total-val">$22,032</span>
+                </div>
+              </div>
+
+              <a href="#bikes" class="btn btn-primary btn-sm" style="margin-top: 1.5rem;">Pre-Qualify With TORQ</a>
+            </div>
+          </div>
+
+          <!-- Tab Pane 2: Trade-In Valuation -->
+          <div id="calc-trade-pane" class="calc-content-grid" style="display: none;">
+            <div class="calc-sliders-col">
+              <div class="form-group">
+                <label class="form-label" for="trade-brand">Your Current Bike Brand</label>
+                <select id="trade-brand" class="form-select">
+                  <option value="ducati">Ducati</option>
+                  <option value="harley">Harley-Davidson</option>
+                  <option value="bmw">BMW Motorrad</option>
+                  <option value="yamaha">Yamaha</option>
+                  <option value="ktm">KTM</option>
+                  <option value="vespa">Vespa</option>
+                  <option value="ather">Ather / Zero EV</option>
+                  <option value="other">Other Brand</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="trade-year">Registration Year</label>
+                <select id="trade-year" class="form-select">
+                  <option value="2025">2025</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2018">2018 - 2019</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="trade-cond">Physical &amp; Mechanical Condition</label>
+                <select id="trade-cond" class="form-select">
+                  <option value="mint">Mint (Showroom condition, full logs)</option>
+                  <option value="good" selected>Good (Minor wear, regularly serviced)</option>
+                  <option value="fair">Fair (Visible scuffs, needs minor tuning)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="trade-km">Current Odometer (km)</label>
+                <input type="number" id="trade-km" class="form-input" value="12000" step="1000">
+              </div>
+
+              <button type="button" id="trade-est-btn" class="btn btn-electric">Calculate Instant Trade-In Equity</button>
+            </div>
+
+            <div class="calc-gauge-col" style="justify-content: center;">
+              <div class="card-icon-wrap" style="width: 80px; height: 80px;">
+                <svg viewBox="0 0 24 24"><path d="m21.5 2-5 5"/><path d="M22 6V2h-4"/><path d="M2.5 22l5-5"/><path d="M2 18v4h4"/></svg>
+              </div>
+              <h3 class="card-title">Instant Hive Trade-In Credit</h3>
+              <p class="card-desc">We buy directly or credit toward your new ride with zero dealership lowballs.</p>
+              <div id="trade-quote-result">
+                <div style="font-family: var(--font-racing); font-size: 1.5rem; color: var(--color-secondary); margin-top: 1rem;">
+                  Select bike specs to calculate
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tyre Tread Divider -->
+    <div class="tyre-tread-divider"></div>
+
+    <!-- ==========================================================================
+         7. COMPARE RIDES (#compare)
+         ========================================================================== -->
+    <section class="compare-section" id="compare">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Side-By-Side Dyno
+          </div>
+          <h2 class="section-title">
+            Compare <span class="text-gradient">Rides &amp; Specs</span>
+          </h2>
+          <p class="section-desc">
+            Stack any two machines side-by-side. Compare displacement, acceleration, horsepower, kerb weight, and verified inspection ratings.
+          </p>
+        </header>
+
+        <div class="tilt-card compare-card-container">
+          <div class="compare-selectors-row">
+            <div class="compare-picker-box">
+              <label class="form-label" for="compare-bike-1">Primary Challenger (Bike A)</label>
+              <select id="compare-bike-1" class="compare-select">
+                <!-- Injected via JS -->
+              </select>
+            </div>
+
+            <div class="vs-badge">VS</div>
+
+            <div class="compare-picker-box">
+              <label class="form-label" for="compare-bike-2">Secondary Challenger (Bike B)</label>
+              <select id="compare-bike-2" class="compare-select">
+                <!-- Injected via JS -->
+              </select>
+            </div>
+          </div>
+
+          <div class="compare-table-wrap" id="compare-matrix-content">
+            <!-- Table dynamically injected via app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tyre Tread Divider -->
+    <div class="tyre-tread-divider"></div>
+
+    <!-- ==========================================================================
+         8. WHY TORQUEHIVE (#why-us)
+         ========================================================================== -->
+    <section class="why-section" id="why-us">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            The Hive Standard
+          </div>
+          <h2 class="section-title">
+            Why <span class="text-gradient">TORQ</span> Stands Alone
+          </h2>
+          <p class="section-desc">
+            Built by riders, for riders. We solved every pain point of buying and selling pre-owned motorcycles.
+          </p>
+        </header>
+
+        <!-- Workshop & Dyno Lab Spotlight Banner (Center Aligned) -->
+        <div class="workshop-showcase-box">
+          <div class="workshop-media-pane">
+            <img src="images/about-garage.webp" alt="TORQ master technician tuning motorcycle in certified inspection garage" class="workshop-media-img" width="1600" height="1000" loading="lazy">
+          </div>
+          <div class="workshop-text-pane">
+            <span class="section-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Inside The Pit Lane
+            </span>
+            <h3 class="workshop-title">
+              The Hive 180-Point Certification Garage
+            </h3>
+            <p class="workshop-desc">
+              Unlike anonymous online classifieds, every motorcycle and scooter sold through TORQ is checked inside our climate-controlled diagnostic bays. We test laser chassis geometry, dynamic brake balance, dyno horsepower output, and digital ECU history.
+            </p>
+            <div class="workshop-badges-row">
+              <span class="spec-pill spec-pill-primary">✓ Dyno Power Graph Included</span>
+              <span class="spec-pill spec-pill-electric">✓ 100% Clean Title Guarantee</span>
+              <span class="spec-pill spec-pill-amber">✓ Battery Health Diagnostic</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-grid">
+          <!-- Card 1 -->
+          <div class="tilt-card">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="card-title">180-Point Inspection</h3>
+            <p class="card-desc">Every vehicle undergoes chassis alignment checks, dyno compression verification, electrical scans, and brake rotor telemetry by master technicians.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="tilt-card">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3 class="card-title">Secured Escrow Payments</h3>
+            <p class="card-desc">Funds are held safely in certified escrow. The seller only receives payout once you sign off on vehicle delivery and verify title ownership.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="tilt-card">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            </div>
+            <h3 class="card-title">Doorstep Test Rides</h3>
+            <p class="card-desc">Our certified Hive Marshals transport the machine directly to your home in enclosed climate-controlled trailers for an unhurried test ride.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="tilt-card">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 class="card-title">Automated Paperwork</h3>
+            <p class="card-desc">Zero DMV queues. We handle title reassignments, lien clearances, transfer tax filing, and registration plates shipped straight to your mailbox.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="tilt-card">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M12 2v20"/><path d="m17 5-5-3-5 3"/><path d="m17 19-5 3-5-3"/></svg>
+            </div>
+            <h3 class="card-title">7-Day Money-Back Shield</h3>
+            <p class="card-desc">Take 7 days or 250 miles to experience your ride in real-world conditions. If you don't fall in love, return it for a complete 100% refund.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="tilt-card">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="card-title">Exclusive Hive Club Perks</h3>
+            <p class="card-desc">Unlock member discounts on Pirelli track tires, Dainese/Alpinestars gear, free track-day telemetry sessions, and invite-only mountain tours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tyre Tread Divider -->
+    <div class="tyre-tread-divider"></div>
+
+    <!-- ==========================================================================
+         9. SELL YOUR RIDE (#sell)
+         ========================================================================== -->
+    <section class="sell-section" id="sell">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            List In Under 3 Minutes
+          </div>
+          <h2 class="section-title">
+            Sell Your Ride <span class="text-gradient">To Verified Enthusiasts</span>
+          </h2>
+          <p class="section-desc">
+            Skip tire-kickers and lowballers. Complete our quick wizard and your listing will be verified by Hive Marshals and published to thousands of active buyers.
+          </p>
+        </header>
+
+        <div class="tilt-card sell-container-card">
+          <!-- Wizard Step Indicators -->
+          <div class="wizard-steps-indicator">
+            <div class="step-node active" data-step="1">
+              <div class="step-circle">1</div>
+              <span class="step-title-lbl">Vehicle Basics</span>
+            </div>
+            <div class="step-node" data-step="2">
+              <div class="step-circle">2</div>
+              <span class="step-title-lbl">Mechanicals</span>
+            </div>
+            <div class="step-node" data-step="3">
+              <div class="step-circle">3</div>
+              <span class="step-title-lbl">Photos Upload</span>
+            </div>
+            <div class="step-node" data-step="4">
+              <div class="step-circle">4</div>
+              <span class="step-title-lbl">Price &amp; Contact</span>
+            </div>
+          </div>
+
+          <!-- Wizard Form -->
+          <form id="sell-ride-form">
+            <!-- Step 1: Basics -->
+            <div class="wizard-step-pane active" data-step="1">
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="sell-category">Category *</label>
+                  <select id="sell-category" class="form-select" required>
+                    <option value="motorcycle">Motorcycle</option>
+                    <option value="scooter">Scooter (Petrol)</option>
+                    <option value="electric">Electric Bike / EV Scooter</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="sell-type">Style / Classification *</label>
+                  <select id="sell-type" class="form-select" required>
+                    <option value="sport">Sport / Superbike</option>
+                    <option value="cruiser">Cruiser / Chopper</option>
+                    <option value="adventure">Adventure / Dual-Sport</option>
+                    <option value="naked">Naked / Streetfighter</option>
+                    <option value="scooter">Maxi / Classic Scooter</option>
+                    <option value="electric">Next-Gen EV</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="sell-brand">Manufacturer / Make *</label>
+                  <input type="text" id="sell-brand" class="form-input" placeholder="e.g. Ducati, Yamaha, BMW, KTM" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="sell-model">Model Name *</label>
+                  <input type="text" id="sell-model" class="form-input" placeholder="e.g. Panigale V4, R 1250 GS, TMAX" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="sell-year">Model Year *</label>
+                  <input type="number" id="sell-year" class="form-input" placeholder="2023" min="1990" max="2026" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="sell-vin">VIN / Registration Plate (Optional)</label>
+                  <input type="text" id="sell-vin" class="form-input" placeholder="17-Digit Vehicle Identification">
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Mechanicals -->
+            <div class="wizard-step-pane" data-step="2">
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="sell-km">Odometer Mileage (km) *</label>
+                  <input type="number" id="sell-km" class="form-input" placeholder="e.g. 5200" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="sell-engine">Displacement or Battery Pack *</label>
+                  <input type="text" id="sell-engine" class="form-input" placeholder="e.g. 1,103 cc or 17.3 kWh" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="sell-power">Horsepower (HP)</label>
+                  <input type="number" id="sell-power" class="form-input" placeholder="e.g. 214">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="sell-cond">Current Condition *</label>
+                  <select id="sell-cond" class="form-select" required>
+                    <option value="pristine">Pristine / Like New (Zero Scratches)</option>
+                    <option value="excellent">Excellent (Light normal road use)</option>
+                    <option value="good">Good (Minor cosmetic marks)</option>
+                  </select>
+                </div>
+
+                <div class="form-group" style="grid-column: 1 / -1;">
+                  <label class="form-label" for="sell-mods">Installed Upgrades &amp; Aftermarket Parts</label>
+                  <input type="text" id="sell-mods" class="form-input" placeholder="e.g. Akrapovic titanium full exhaust, Ohlins steering damper, tail tidy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Photos Upload & Preview -->
+            <div class="wizard-step-pane" data-step="3">
+              <div class="photo-drop-zone" id="photo-drop-zone">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" style="margin-bottom: 1rem;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <h4 style="font-family: var(--font-racing); font-size: 1.1rem; color: var(--text-chrome); margin-bottom: 0.35rem;">Click or Drag Photos of Your Machine</h4>
+                <p style="color: var(--text-muted); font-size: 0.85rem;">Upload high-res exterior, cockpit, odometer, and exhaust photos. (WebP/JPEG/PNG)</p>
+                <input type="file" id="sell-photo-input" accept="image/*" multiple style="display: none;">
+              </div>
+              <div class="photo-preview-grid" id="photo-preview-grid"></div>
+            </div>
+
+            <!-- Step 4: Price & Contact -->
+            <div class="wizard-step-pane" data-step="4">
+              <div class="valuation-badge-preview">
+                <span>Estimated Hive Fair Market Value:</span>
+                <strong id="sell-est-value">$18,400</strong>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="sell-price">Your Asking Price ($ USD) *</label>
+                  <input type="number" id="sell-price" class="form-input" placeholder="e.g. 18500" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="sell-city">Vehicle City &amp; State *</label>
+                  <input type="text" id="sell-city" class="form-input" placeholder="e.g. Austin, TX" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="sell-phone">Contact Phone / WhatsApp *</label>
+                  <input type="tel" id="sell-phone" class="form-input" placeholder="+1 (512) 000-0000" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="sell-contact-email">Contact Email *</label>
+                  <input type="email" id="sell-contact-email" class="form-input" value="rider@torq.com" required>
+                </div>
+
+                <div class="form-group" style="grid-column: 1 / -1;">
+                  <label class="form-label" for="sell-notes">Description / Maintenance History</label>
+                  <textarea id="sell-notes" class="form-textarea" rows="3" placeholder="Tell riders about service intervals, storage conditions, and why you are parting ways."></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Wizard Navigation Actions -->
+            <div class="wizard-nav-actions">
+              <button type="button" id="sell-prev-btn" class="btn btn-secondary" style="display: none;">&larr; Previous Step</button>
+              <button type="button" id="sell-next-btn" class="btn btn-primary">Next Step &rarr;</button>
+              <button type="submit" id="sell-submit-btn" class="btn btn-electric" style="display: none;">Submit For Hive Review ✓</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tyre Tread Divider -->
+    <div class="tyre-tread-divider"></div>
+
+    <!-- ==========================================================================
+         10. COMMUNITY & EVENTS (#community, #events)
+         ========================================================================== -->
+    <section class="community-section" id="community">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Throttle Together
+          </div>
+          <h2 class="section-title">
+            Upcoming <span class="text-gradient">Group Rides &amp; Events</span>
+          </h2>
+          <p class="section-desc">
+            Connect with like-minded riders. From sunrise canyon carving to midnight urban sweeps and professional circuit track days.
+          </p>
+        </header>
+
+        <!-- Community Group Ride Hero Banner (Center Aligned) -->
+        <div class="community-hero-card">
+          <img src="images/community-group-ride.webp" alt="Pack of motorcycle riders riding in formation on open coastal highway" class="community-hero-bg" width="1600" height="1000" loading="lazy">
+          <div class="community-hero-overlay"></div>
+          <div class="community-hero-content">
+            <span class="section-badge community-hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Ride With The Pack
+            </span>
+            <h3 class="community-hero-title">
+              Never Ride Alone. Join Local Hive Chapters.
+            </h3>
+            <p class="community-hero-desc">
+              Over 420 group excursions, track days, and charity runs organized annually. Meet your local pack marshals and test ride along epic routes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Events Grid (Injected via app.js) -->
+        <div class="events-grid" id="events-grid">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Rider Forum & Discussion Preview Ticker -->
+        <div class="forum-ticker-box">
+          <div class="forum-title-group">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <div>
+              <div class="forum-headline">Trending Hive Forum Discussions</div>
+              <div class="forum-recent-topic">"Best Dual-Compound Tires for Wet Switchbacks?" • 48 Replies • Active 12m ago</div>
+            </div>
+          </div>
+          <a href="#community" class="btn btn-secondary btn-sm" onclick="showToast('Joined Hive Discord &amp; Forum Room!', 'info');">Open Rider Community</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tyre Tread Divider -->
+    <div class="tyre-tread-divider"></div>
+
+    <!-- ==========================================================================
+         11. TESTIMONIALS (AUTO-SLIDING CAROUSEL)
+         ========================================================================== -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Verified Rider Feedback
+          </div>
+          <h2 class="section-title">
+            Words From The <span class="text-gradient">Apex Riders</span>
+          </h2>
+          <p class="section-desc">
+            Read authentic stories from verified owners and buyers who traded their rides on the TORQ network.
+          </p>
+        </header>
+
+        <div class="carousel-container">
+          <div class="testimonial-track">
+            <!-- Slide 1 -->
+            <div class="testimonial-slide active">
+              <div class="tilt-card testimonial-card">
+                <div class="rider-avatar-wrap">
+                  <img src="images/rider-1.webp" alt="Marcus Vance portrait" class="rider-avatar-img" width="600" height="600" loading="lazy">
+                </div>
+                <div class="rider-stars">★★★★★</div>
+                <blockquote class="rider-quote">
+                  "Bought my 2023 Panigale V4 S through TORQ. The 180-point inspection report gave me total peace of mind. Delivery trailer arrived right at my driveway, and the escrow funds were released in minutes. Best buying experience of my life!"
+                </blockquote>
+                <div class="rider-name">Marcus Vance</div>
+                <div class="rider-role">Track Enthusiast • Austin, TX</div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-slide">
+              <div class="tilt-card testimonial-card">
+                <div class="rider-avatar-wrap">
+                  <img src="images/rider-2.webp" alt="Elena Rostova portrait" class="rider-avatar-img" width="600" height="600" loading="lazy">
+                </div>
+                <div class="rider-stars">★★★★★</div>
+                <blockquote class="rider-quote">
+                  "Sold my BMW GS in 3 days without dealing with endless Craigslist scammers or lowballers. The verified buyer booked a doorstep test ride, fell in love, and TORQ handled the entire title transfer effortlessly."
+                </blockquote>
+                <div class="rider-name">Elena Rostova</div>
+                <div class="rider-role">Adventure Tourer • Seattle, WA</div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="testimonial-slide">
+              <div class="tilt-card testimonial-card">
+                <div class="rider-avatar-wrap">
+                  <img src="images/rider-3.webp" alt="Devon Chen portrait" class="rider-avatar-img" width="600" height="600" loading="lazy">
+                </div>
+                <div class="rider-stars">★★★★★</div>
+                <blockquote class="rider-quote">
+                  "Upgraded from a petrol commuter to an Ather smart EV. The instant trade-in equity calculator gave me a fair valuation on my trade and knocked $3,500 directly off my new financing monthly EMI. 10/10 recommend to all riders."
+                </blockquote>
+                <div class="rider-name">Devon Chen</div>
+                <div class="rider-role">Daily EV Commuter • San Jose, CA</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <div class="carousel-controls-row">
+            <button id="test-prev-btn" class="carousel-arrow-btn" aria-label="Previous Testimonial">&larr;</button>
+            <div class="carousel-dots" id="test-dots"></div>
+            <button id="test-next-btn" class="carousel-arrow-btn" aria-label="Next Testimonial">&rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tyre Tread Divider -->
+    <div class="tyre-tread-divider"></div>
+
+    <!-- ==========================================================================
+         12. FAQ ACCORDION (#faq)
+         ========================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Got Questions?
+          </div>
+          <h2 class="section-title">
+            Frequently Asked <span class="text-gradient">Questions</span>
+          </h2>
+          <p class="section-desc">
+            Everything you need to know about certified inspections, escrow protection, test rides, and title transfer.
+          </p>
+        </header>
+
+        <div class="faq-container">
+          <!-- Item 1 -->
+          <div class="faq-item active">
+            <button class="faq-header-btn" type="button" aria-expanded="true">
+              <span>How does the 180-Point Apex Inspection work?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-body-collapse">
+              <div class="faq-body-content">
+                Every motorcycle or scooter submitted to TORQ undergoes a comprehensive physical examination by an ASE-certified technician. We test frame laser alignment, compression across all cylinders, charging system health, suspension rebound damping, tire tread depth, and ECU diagnostic fault logs. The complete PDF report is attached to each listing.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <button class="faq-header-btn" type="button" aria-expanded="false">
+              <span>How does doorstep test ride delivery work?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-body-collapse">
+              <div class="faq-body-content">
+                Once you select your preferred vehicle and pick a delivery time slot, our licensed Hive Marshal transports the machine to your residential or office location inside an enclosed custom bike hauler. You present your valid motorcycle endorsement and gear, and take the bike for a 30-minute test route on your familiar home roads.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <button class="faq-header-btn" type="button" aria-expanded="false">
+              <span>Is my payment protected through escrow?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-body-collapse">
+              <div class="faq-body-content">
+                Yes, 100%. When you purchase a vehicle on TORQ, your funds are placed in a federally chartered escrow account. The seller is never paid until you physically take delivery, inspect the vehicle in person, verify the vehicle title, and authorize the payout.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button class="faq-header-btn" type="button" aria-expanded="false">
+              <span>What if I decide the bike isn't right for me after buying?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-body-collapse">
+              <div class="faq-body-content">
+                All certified TORQ purchases include our 7-Day or 250-Mile Money-Back Shield. If the ergonomics don't suit you or you change your mind for any reason, notify our marshal support desk to initiate an uncomplicated, full-refund return pickup.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item">
+            <button class="faq-header-btn" type="button" aria-expanded="false">
+              <span>Can I trade in a petrol bike for an electric vehicle?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-body-collapse">
+              <div class="faq-body-content">
+                Absolutely! We actively encourage riders switching to next-gen electric superbikes and smart urban commuters. Our trade-in calculator applies your petrol machine's cash equity directly toward the down payment on Zero, Ather, or other electric inventory.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tyre Tread Divider -->
+    <div class="tyre-tread-divider"></div>
+
+    <!-- ==========================================================================
+         13. CONTACT SECTION (#contact)
+         ========================================================================== -->
+    <section class="contact-section" id="contact">
+      <img src="images/contact-bg.webp" alt="TorqueHive night showroom and garage workshop background ambience" class="contact-bg-media" width="1600" height="1000" loading="lazy">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Pit Lane Support
+          </div>
+          <h2 class="section-title">
+            Connect With <span class="text-gradient">TORQ Marshals</span>
+          </h2>
+          <p class="section-desc">
+            Have questions regarding vehicle inspections, booking a private test track session, or selling a rare collector bike? We're on standby.
+          </p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Contact Form Card -->
+          <div class="tilt-card contact-card-box">
+            <h3 class="card-title" style="margin-bottom: 1.5rem;">Send A Dispatch Message</h3>
+            <form id="contact-form" style="width: 100%;">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full Name *</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="Marcus Vance" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address *</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="rider@torq.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-phone">Phone / WhatsApp</label>
+                <input type="tel" id="contact-phone" class="form-input" placeholder="+1 (512) 890-4421">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Topic / Nature of Inquiry</label>
+                <select id="contact-subject" class="form-select">
+                  <option value="testride">Book A Private Test Ride</option>
+                  <option value="buy">Vehicle Purchase &amp; Escrow</option>
+                  <option value="sell">Sell / Consign My Motorcycle</option>
+                  <option value="event">Host A Hive Group Ride</option>
+                  <option value="other">General Question</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Message Details *</label>
+                <textarea id="contact-message" class="form-textarea" rows="4" placeholder="Let our marshals know what machine or route you are inquiring about..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Dispatch Message To Hive &rarr;</button>
+            </form>
+          </div>
+
+          <!-- HQ Details Card & Embedded Map -->
+          <div class="tilt-card contact-card-box">
+            <h3 class="card-title" style="margin-bottom: 0.5rem;">TORQ Headquarters</h3>
+            <p class="card-desc">Showroom, Dyno Testing Bays, and Rider Pit Lane.</p>
+
+            <div class="contact-info-list">
+              <div class="contact-item-row">
+                <div class="contact-icon-pill">
+                  <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-item-lbl">Apex Showroom &amp; Garage</span>
+                  <span class="contact-item-val">1042 Apex Boulevard, Speedwell District, Austin, TX 78701</span>
+                </div>
+              </div>
+
+              <div class="contact-item-row">
+                <div class="contact-icon-pill">
+                  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-item-lbl">Rider 24/7 Hotline</span>
+                  <span class="contact-item-val">+1 (800) 867-7834 (TORQUE)</span>
+                </div>
+              </div>
+
+              <div class="contact-item-row">
+                <div class="contact-icon-pill">
+                  <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-item-lbl">Official Inquiries</span>
+                  <span class="contact-item-val">contact@torq.com / marshal@torq.com</span>
+                </div>
+              </div>
+
+              <div class="contact-item-row">
+                <div class="contact-icon-pill">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-item-lbl">Pit Lane Hours</span>
+                  <span class="contact-item-val">Mon - Sat: 8:00 AM - 8:00 PM CST | Sun: Group Rides Only</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Responsive Dark Map Frame -->
+            <div class="contact-map-frame" aria-label="TorqueHive Austin HQ Map Location">
+              <iframe 
+                title="TorqueHive Austin HQ Map"
+                src="https://maps.google.com/maps?q=Austin%20Texas%20Downtown&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         14. USER & ADMIN DASHBOARD SECTION (#dashboard)
+         ========================================================================== -->
+    <section id="dashboard-section">
+      <div id="dashboard"></div>
+      <div class="container">
+        <!-- Dashboard User Header Banner -->
+        <div class="dash-user-banner">
+          <div class="dash-user-info">
+            <img id="dash-user-avatar" src="images/rider-1.webp" alt="User Profile Avatar" class="dash-avatar-large" width="80" height="80">
+            <div class="dash-user-details">
+              <h2 id="dash-user-name">Alex 'Apex' Mercer</h2>
+              <div id="dash-user-email" style="color: var(--text-muted); font-size: 0.95rem;">rider@torq.com</div>
+              <div id="dash-user-role" class="dash-user-role-badge">APEX TORQ MEMBER</div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.85rem; align-items: center; flex-wrap: wrap;">
+            <button id="dash-logout-btn" class="btn btn-secondary btn-sm" type="button">Log Out</button>
+          </div>
+        </div>
+
+        <!-- Dashboard KPI Summary Cards -->
+        <div class="stats-grid" style="margin-bottom: 2.5rem;">
+          <div class="tilt-card stat-card" style="padding: 1.5rem;">
+            <div class="stat-number-wrap">
+              <span class="stat-odometer" id="dash-stat-saved">2</span>
+            </div>
+            <div class="stat-label">Saved Wishlist</div>
+          </div>
+          <div class="tilt-card stat-card" style="padding: 1.5rem;">
+            <div class="stat-number-wrap">
+              <span class="stat-odometer" id="dash-stat-listings">0</span>
+            </div>
+            <div class="stat-label">My Listings</div>
+          </div>
+          <div class="tilt-card stat-card" style="padding: 1.5rem;">
+            <div class="stat-number-wrap">
+              <span class="stat-odometer" id="dash-stat-rides">1</span>
+            </div>
+            <div class="stat-label">Test Rides Booked</div>
+          </div>
+          <div class="tilt-card stat-card" style="padding: 1.5rem;">
+            <div class="stat-number-wrap">
+              <span class="stat-odometer" id="dash-stat-enquiries">1</span>
+            </div>
+            <div class="stat-label">Inquiries Sent</div>
+          </div>
+        </div>
+
+        <!-- Dashboard Navigation Tabs -->
+        <div class="dash-nav-tabs">
+          <button class="dash-tab-btn active" data-tab="saved">Saved Rides</button>
+          <button class="dash-tab-btn" data-tab="listings">My Vehicles</button>
+          <button class="dash-tab-btn" data-tab="testrides">Test Ride Schedule</button>
+          <button class="dash-tab-btn" data-tab="profile">Profile Settings</button>
+          <button class="dash-tab-btn" data-tab="admin" style="display: none; color: var(--color-electric);">Admin Pit Control ⚡</button>
+        </div>
+
+        <!-- Tab Panes -->
+        <!-- Tab 1: Saved Rides -->
+        <div id="pane-saved" class="dash-tab-pane active">
+          <div class="rides-grid" id="dash-saved-rides-grid"></div>
+        </div>
+
+        <!-- Tab 2: My Listings -->
+        <div id="pane-listings" class="dash-tab-pane">
+          <div class="dash-table-wrap">
+            <table class="dash-data-table">
+              <thead>
+                <tr>
+                  <th>Vehicle Details</th>
+                  <th>Asking Price</th>
+                  <th>Mileage</th>
+                  <th>Review Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="dash-my-listings-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 3: Test Rides Schedule -->
+        <div id="pane-testrides" class="dash-tab-pane">
+          <div class="dash-table-wrap">
+            <table class="dash-data-table">
+              <thead>
+                <tr>
+                  <th>Machine</th>
+                  <th>Date &amp; Time Slot</th>
+                  <th>Delivery Location</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="dash-testrides-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 4: Profile Settings -->
+        <div id="pane-profile" class="dash-tab-pane">
+          <div class="tilt-card" style="max-width: 600px; margin: 0 auto; text-align: left; padding: 2.5rem;">
+            <h3 class="card-title" style="margin-bottom: 1.5rem;">Edit Rider Profile</h3>
+            <form id="profile-form" style="width: 100%;">
+              <div class="form-group">
+                <label class="form-label" for="profile-name">Full Name</label>
+                <input type="text" id="profile-name" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="profile-phone">Contact Phone</label>
+                <input type="tel" id="profile-phone" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="profile-city">Home Riding Hub</label>
+                <input type="text" id="profile-city" class="form-input" required>
+              </div>
+              <button type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Save Profile Changes</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Tab 5: Admin Management (Admin Only) -->
+        <div id="pane-admin" class="dash-tab-pane">
+          <div class="admin-chart-box">
+            <h3 class="card-title" style="margin-bottom: 0.5rem;">Marketplace Sales Volume Trend ($ USD)</h3>
+            <p class="card-desc" style="margin-bottom: 1.5rem;">Telemetry of gross transactions across TORQ chapters.</p>
+            <canvas id="admin-kpi-chart" class="admin-chart-canvas"></canvas>
+          </div>
+
+          <h3 style="font-family: var(--font-racing); font-size: 1.3rem; margin: 2rem 0 1rem 0; color: var(--text-chrome);">
+            Listings Moderation Queue
+          </h3>
+          <div class="dash-table-wrap" style="margin-bottom: 2.5rem;">
+            <table class="dash-data-table">
+              <thead>
+                <tr>
+                  <th style="text-align: left;">Title</th>
+                  <th>Price</th>
+                  <th>Status</th>
+                  <th>Featured</th>
+                  <th>Moderator Controls</th>
+                </tr>
+              </thead>
+              <tbody id="admin-listings-tbody"></tbody>
+            </table>
+          </div>
+
+          <h3 style="font-family: var(--font-racing); font-size: 1.3rem; margin: 2rem 0 1rem 0; color: var(--text-chrome);">
+            Registered Riders Directory
+          </h3>
+          <div class="dash-table-wrap" style="margin-bottom: 2.5rem;">
+            <table class="dash-data-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Account Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-users-tbody"></tbody>
+            </table>
+          </div>
+
+          <h3 style="font-family: var(--font-racing); font-size: 1.3rem; margin: 2rem 0 1rem 0; color: var(--text-chrome);">
+            Customer Inquiries &amp; Test Rides
+          </h3>
+          <div class="dash-table-wrap">
+            <table class="dash-data-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Sender</th>
+                  <th>Machine</th>
+                  <th>Message / Notes</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-enquiries-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       15. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div>
+          <a href="#" class="brand-link" aria-label="TORQ Footer Logo">
+            <svg class="brand-logo-svg" viewBox="0 0 64 64" fill="none" style="width: 36px; height: 36px;">
+              <path d="M32 4 C34.2 4 35.5 6 37.5 6.5 C39.5 7 41.5 5.5 43.5 6.5 C45.5 7.5 46.2 9.8 48 11.2 C49.8 12.6 52.2 12.5 53.6 14.3 C55 16.1 54.5 18.5 55.5 20.5 C56.5 22.5 58.5 23.8 59 26 C59.5 28.2 58.2 30.2 58.2 32 C58.2 33.8 59.5 35.8 59 38 C58.5 40.2 56.5 41.5 55.5 43.5 C54.5 45.5 55 47.9 53.6 49.7 C52.2 51.5 49.8 51.4 48 52.8 C46.2 54.2 45.5 56.5 43.5 57.5 C41.5 58.5 39.5 57 37.5 57.5 C35.5 58 34.2 60 32 60 C29.8 60 28.5 58 26.5 57.5 C24.5 57 22.5 58.5 20.5 57.5 C18.5 56.5 17.8 54.2 16 52.8 C14.2 51.4 11.8 51.5 10.4 49.7 C9 47.9 9.5 45.5 8.5 43.5 C7.5 41.5 5.5 40.2 5 38 C4.5 35.8 5.8 33.8 5.8 32 C5.8 30.2 4.5 28.2 5 26 C5.5 23.8 7.5 22.5 8.5 20.5 C9.5 18.5 9 16.1 10.4 14.3 C11.8 12.5 14.2 12.6 16 11.2 C17.8 9.8 18.5 7.5 20.5 6.5 C22.5 5.5 24.5 7 26.5 6.5 C28.5 6 29.8 4 32 4 Z" fill="#15171C" stroke="#FF4D1A" stroke-width="2.5" stroke-linejoin="round"/>
+              <circle cx="32" cy="32" r="18" stroke="url(#torq-grad-ft)" stroke-width="3.5" stroke-dasharray="85 30" stroke-linecap="round"/>
+              <path d="M26 21 H38 V26 H26 Z" fill="#E7EAF0" stroke="#FF4D1A" stroke-width="1.5"/>
+              <rect x="29" y="26" width="6" height="13" fill="#FF4D1A" rx="1"/>
+              <circle cx="32" cy="38" r="4" fill="#FFB020" stroke="#15171C" stroke-width="1.5"/>
+              <path d="M28 44 L32 50 L36 44" stroke="#FF4D1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="torq-grad-ft" x1="14" y1="14" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FF4D1A"/>
+                  <stop offset="50%" stop-color="#FFB020"/>
+                  <stop offset="100%" stop-color="#C6FF3D"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="brand-wordmark">
+              <span class="brand-name" style="font-size: 1.25rem;">TOR<span>Q</span></span>
+            </div>
+          </a>
+          <p class="footer-col-desc">
+            The high-octane marketplace connecting passionate vehicle enthusiasts and riders. Certified inspections, escrow transactions, and group ride camaraderie.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Discord">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6h0a14.5 14.5 0 0 0-4-1.2 11.5 11.5 0 0 0-1 .8 11.5 11.5 0 0 0-1-.8A14.5 14.5 0 0 0 8 6a18.2 18.2 0 0 0-2 10 13.9 13.9 0 0 0 5 2.5 10.7 10.7 0 0 0 1-1.6 8.9 8.9 0 0 1-1.6-.8l.4-.3a11.2 11.2 0 0 0 8.4 0l.4.3a8.9 8.9 0 0 1-1.6.8 10.7 10.7 0 0 0 1 1.6 13.9 13.9 0 0 0 5-2.5A18.2 18.2 0 0 0 18 6z"/><circle cx="9.5" cy="11.5" r="1.5"/><circle cx="14.5" cy="11.5" r="1.5"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <div class="footer-col-title">Showroom</div>
+          <ul class="footer-links-list">
+            <li><a href="#bikes">All Motorcycles</a></li>
+            <li><a href="#bikes">Petrol Maxi Scooters</a></li>
+            <li><a href="#bikes">Electric Superbikes</a></li>
+            <li><a href="#calculator">Financing &amp; APR</a></li>
+            <li><a href="#compare">Spec Comparison</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Community & TORQ -->
+        <div>
+          <div class="footer-col-title">TORQ Network</div>
+          <ul class="footer-links-list">
+            <li><a href="#why-us">180-Point Inspection</a></li>
+            <li><a href="#community">Upcoming Group Rides</a></li>
+            <li><a href="#sell">Sell Your Ride</a></li>
+            <li><a href="#testimonials">Rider Testimonials</a></li>
+            <li><a href="#faq">Frequently Asked</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <div class="footer-col-title">Throttle Dispatch</div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+            Get weekly drops of verified superbikes, weekend canyon ride routes, and private track discounts.
+          </p>
+          <form class="footer-newsletter-form">
+            <div class="newsletter-input-wrap">
+              <input type="email" class="newsletter-input" placeholder="rider@torq.com" required>
+              <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 TORQ Vehicles &amp; Rides Inc. All Rights Reserved. Built for Riders.</div>
+        <div style="display: flex; gap: 1.5rem; align-items: center;">
+          <a href="#" class="open-legal-modal" style="color: var(--text-dim); text-decoration: none;">Privacy Policy</a>
+          <a href="#" class="open-legal-modal" style="color: var(--text-dim); text-decoration: none;">Terms of Escrow</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       16. MODALS SYSTEM
+       ========================================================================== -->
+
+  <!-- Modal: Saved Rides Wishlist Modal -->
+  <div class="modal-backdrop" id="wishlist-modal" role="dialog" aria-modal="true" aria-label="Saved Rides Wishlist">
+    <div class="modal-dialog" style="max-width: 650px;">
+      <button class="modal-close-btn" type="button" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="wishlist-modal-header">
+        <div>
+          <span class="section-badge" style="margin-bottom: 0.4rem; display: inline-flex;">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="var(--color-primary)" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            My Saved Rides
+          </span>
+          <h3 style="font-family: var(--font-racing); font-size: 1.4rem; color: var(--text-chrome); margin: 0;">
+            Wishlist (<span id="wishlist-modal-count">0</span>)
+          </h3>
+        </div>
+        <button id="wishlist-clear-all-btn" class="btn btn-secondary btn-sm" style="font-size: 0.8rem; padding: 0.35rem 0.8rem;" type="button">Clear All</button>
+      </div>
+
+      <div class="wishlist-modal-body" id="wishlist-modal-items">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 1: Quick View Modal -->
+  <div class="modal-backdrop" id="quickview-modal" role="dialog" aria-modal="true" aria-label="Vehicle Quick View">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" type="button" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-body-dynamic">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Book Test Ride Modal -->
+  <div class="modal-backdrop" id="testride-modal" role="dialog" aria-modal="true" aria-label="Book Test Ride">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" type="button" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span class="section-badge">Doorstep Test Ride</span>
+        <h3 class="testride-bike-title" style="font-family: var(--font-racing); font-size: 1.4rem; color: var(--text-chrome); margin-top: 0.5rem;">
+          Schedule Your Throttle Session
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Delivered directly to your driveway in an enclosed trailer.</p>
+      </div>
+
+      <form id="testride-booking-form">
+        <input type="hidden" id="testride-bike-id">
+        <div class="form-group">
+          <label class="form-label" for="testride-date">Preferred Date *</label>
+          <input type="date" id="testride-date" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="testride-time">Time Slot *</label>
+          <select id="testride-time" class="form-select" required>
+            <option value="10:00">Morning Session (10:00 AM)</option>
+            <option value="14:00" selected>Afternoon Session (02:00 PM)</option>
+            <option value="17:00">Golden Hour Run (05:00 PM)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="testride-delivery-type">Experience Format *</label>
+          <select id="testride-delivery-type" class="form-select">
+            <option value="Doorstep Delivery">Doorstep Home Delivery (Marshall Accompanied)</option>
+            <option value="Pit Lane HQ">TORQ Austin HQ Showroom Track</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="testride-email">Confirmation Email *</label>
+          <input type="email" id="testride-email" class="form-input" value="rider@torq.com" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Confirm Test Ride Booking ✓</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 3: Vehicle Enquiry Modal -->
+  <div class="modal-backdrop" id="enquiry-modal" role="dialog" aria-modal="true" aria-label="Vehicle Enquiry">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" type="button" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span class="section-badge">Direct Machine Inquiries</span>
+        <h3 class="enquiry-bike-title" style="font-family: var(--font-racing); font-size: 1.4rem; color: var(--text-chrome); margin-top: 0.5rem;">
+          Ask A Question
+        </h3>
+      </div>
+
+      <form id="bike-enquiry-form">
+        <div class="form-group">
+          <label class="form-label" for="enquiry-name">Your Name *</label>
+          <input type="text" id="enquiry-name" class="form-input" placeholder="Alex Mercer" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="enquiry-email">Your Email *</label>
+          <input type="email" id="enquiry-email" class="form-input" placeholder="rider@torq.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="enquiry-phone">Phone (Optional)</label>
+          <input type="tel" id="enquiry-phone" class="form-input" placeholder="+1 (555) 000-0000">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="enquiry-msg">Your Inquiry *</label>
+          <textarea id="enquiry-msg" class="form-textarea" rows="3" placeholder="Inquire about tire condition, service records, or trade-in offer..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 4: Auth Modal (Login / Sign Up) -->
+  <div class="modal-backdrop" id="auth-modal" role="dialog" aria-modal="true" aria-label="Authentication">
+    <div class="modal-dialog" style="max-width: 480px;">
+      <button class="modal-close-btn" type="button" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <!-- 1-Click Seed Accounts Hint Pill -->
+      <div class="seed-accounts-hint">
+        <div><strong>Demo Seed Accounts (Click To Pre-Fill):</strong></div>
+        <span class="seed-click-pill" id="fill-seed-rider">👤 Rider (rider@torq.com)</span>
+        <span class="seed-click-pill" id="fill-seed-admin">🛡️ Admin (admin@torq.com)</span>
+      </div>
+
+      <div class="auth-tabs-row">
+        <button class="auth-tab-btn active" id="auth-tab-login" type="button">Sign In</button>
+        <button class="auth-tab-btn" id="auth-tab-signup" type="button">Create Account</button>
+      </div>
+
+      <!-- Login Pane -->
+      <div id="auth-pane-login">
+        <form id="login-form">
+          <div class="form-group">
+            <label class="form-label" for="login-email">Email Address</label>
+            <input type="email" id="login-email" class="form-input" value="rider@torq.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="login-pass">Password</label>
+            <div style="position: relative;">
+              <input type="password" id="login-pass" class="form-input" value="Rider@123" required>
+              <button type="button" class="toggle-pass-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-dim); cursor: pointer;" aria-label="Toggle password visibility">👁️</button>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <label style="font-size: 0.85rem; color: var(--text-muted); cursor: pointer;">
+              <input type="checkbox" checked style="margin-right: 0.35rem;"> Remember Me
+            </label>
+            <button type="button" id="forgot-pass-btn" style="background: none; border: none; color: var(--color-primary); font-size: 0.85rem; cursor: pointer;">Forgot PIN?</button>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In To Dashboard &rarr;</button>
+        </form>
+      </div>
+
+      <!-- Signup Pane -->
+      <div id="auth-pane-signup" style="display: none;">
+        <form id="signup-form">
+          <div class="form-group">
+            <label class="form-label" for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" class="form-input" placeholder="Chase Miller" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signup-email">Email Address</label>
+            <input type="email" id="signup-email" class="form-input" placeholder="chase@example.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signup-pass">Create Password</label>
+            <div style="position: relative;">
+              <input type="password" id="signup-pass" class="form-input" placeholder="Min 6 characters" required>
+              <button type="button" class="toggle-pass-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-dim); cursor: pointer;" aria-label="Toggle password visibility">👁️</button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-electric" style="width: 100%; margin-top: 0.5rem;">Join The TORQ Network &rarr;</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Legal Terms & Privacy Modal -->
+  <div class="modal-backdrop" id="legal-modal" role="dialog" aria-modal="true" aria-label="Legal Terms">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" type="button" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h3 class="card-title" style="margin-bottom: 1rem;">TORQ Privacy &amp; Escrow Guarantee</h3>
+      <div style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; text-align: left;">
+        <p style="margin-bottom: 1rem;">
+          <strong>1. Vehicle Title &amp; Escrow Safety:</strong> Every transaction facilitated on the TORQ platform is protected by our triple-verified escrow system. Buyer funds are held in reserve until the buyer signs off on delivery and DMV title clearance.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          <strong>2. 180-Point Dyno Certification:</strong> Inspection reports are compiled by independent master motorcycle mechanics. Discrepancies reported within 7 days qualify for immediate return and reimbursement.
+        </p>
+        <p>
+          <strong>3. Rider Data Privacy:</strong> We strictly protect user location telemetry, phone numbers, and riding habit data. We never sell enthusiast data to third-party telemarketers.
+        </p>
+      </div>
+      <button class="btn btn-primary btn-sm" style="margin-top: 1.5rem;" onclick="closeModal(document.getElementById('legal-modal'));">I Understand &amp; Agree</button>
+    </div>
+  </div>
+
+  <!-- Floating Scroll Up Button -->
+  <button id="floating-scroll-top" class="floating-scroll-top-btn" type="button" aria-label="Scroll back to top" title="Scroll to Top">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"/>
+      <polyline points="5 12 12 5 19 12"/>
+    </svg>
+  </button>
+
+  <!-- Floating Toast Notification Container -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Application Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>
