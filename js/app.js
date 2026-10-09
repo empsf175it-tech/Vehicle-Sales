@@ -1984,7 +1984,7 @@ function renderDashboardSavedRides() {
 
   container.innerHTML = savedBikes.map(b => `
     <div class="tilt-card bike-card" style="padding: 0;">
-      <div class="bike-media-wrap" style="height: 180px;">
+      <div class="bike-media-wrap">
         <img class="bike-img" src="${b.image}" alt="${b.title}">
       </div>
       <div class="bike-info-body">
